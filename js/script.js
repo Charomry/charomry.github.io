@@ -28,9 +28,37 @@ for (let i = 1; i < items.length; i++) {
   console.log(items[i])
 } */
 
-const numbers = [1, 2, 3, 4, 5];
-const newNumbers = numbers.map((number) => {
-  return number * 3;
-});
+const strings = ['apple', 'banana', 'cherry', 'orange', 'kiwi', 'mango'];
+const newStrings = strings.filter((string) => {
+  return string.length > 5;
+})
 
-console.log(newNumbers);
+console.log(newStrings);
+
+let x = 320;
+let y = 180;
+let xspeed = 5;
+let yspeed = 2;
+
+let r = 30;
+
+
+function setup() {
+  let myCanvas = createCanvas(1850, 400); // Or any desired dimensions
+  myCanvas.parent("myCanvasContainer");
+  rectMode(CENTER);
+}
+
+function draw() {
+  background(0);
+  ellipse(x, y, r*2, r*2);
+  x += xspeed;
+  y += yspeed;
+  if (x > width - r || x < r) {
+    xspeed = -xspeed;
+  }
+  if (y > height - r || y < r) {
+    yspeed = -yspeed
+  }
+
+}
