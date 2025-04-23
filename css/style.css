@@ -1,0 +1,77 @@
+body {
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+}
+
+.Quote {
+  display: flex;
+}
+
+.Quote p {
+  width: 25%;
+  height: 100px;
+  padding: 15px;
+  background-color: coral;
+  box-shadow: 10px 10px 9px 12px black;
+  margin: 20px;
+  font-size: 32px;
+}
+
+.Quote > .quoteOne {
+  background-color: cyan;
+}
+
+.Quote > .quoteTwo {
+  background-color: lightgreen;
+}
+
+.Quote > .quoteThree {
+  background-color: red;
+}
+
+.Quote > .quoteFour {
+  background-color: indigo;
+}
+
+
+.flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0px solid rgb(106, 90, 205);
+}
+
+.flex-box div {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  border: 0px solid rgb(106, 90, 205);
+  margin: 15px;
+  background-color: black;
+  box-shadow: 1px 10px;
+}
+
+img {
+  align-items: center;
+  width: 150px;
+  height: 100%;
+}
+
+.one img {
+
+}
+
+.flex-box p {
+  text-align: center;
+  font-size: 32px;
+}
+
+button {
+  color: blue;
+  flex: 1;
+  height: 150px;
+  width: 150px;
+  padding: 5px;
+  background-color: rgba(255, 99, 71, 0.2);
+  box-shadow: 5px 5px 4px 6px black;
+  position: fixed;
+}
