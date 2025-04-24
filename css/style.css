@@ -64,7 +64,7 @@ img {
   font-size: 32px;
 }
 
-button {
+.flex-box button {
   color: blue;
   flex: 1;
   height: 150px;
@@ -72,5 +72,45 @@ button {
   padding: 5px;
   background-color: rgba(255, 99, 71, 0.2);
   box-shadow: 5px 5px 4px 6px black;
-  position: fixed;
+}
+
+/* ===-- OVERLAP BUTTON + IMAGE IN A TILE --=== */
+.flex-box > div {            /* <-- each black square (tiles) */
+  position: relative;        /* establish new positioning context  */
+  overflow: hidden;          /* protect rounded corners            */
+}
+
+.flex-box > div button,
+.flex-box > div img {
+  position: absolute;        /* both share the same top-left origin */
+  inset: 0;                  /* top:0 right:0 bottom:0 left:0       */
+  width: 100%;               /* stretch to fill tile               */
+  height: 100%;
+  object-fit: cover;         /* keep aspect ratio; crop overflow    */
+}
+
+.flex-box > div button {
+  background: transparent;   /* show gif below                      */
+  border: none;
+  cursor: pointer;
+  z-index: 2;                /* sits on top – receives clicks       */
+}
+
+.flex-box > div img {
+  z-index: 1;                /* stays underneath                    */
+}
+
+
+#myCanvasContainer div {
+  position: auto; /* Or other positioning as needed */
+  width: 500px; /* Or any desired width */
+  height: 300px; /* Or any desired height */
+}
+
+canvas {
+  position: auto; /* Or other positioning as needed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
